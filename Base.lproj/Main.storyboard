@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ReceivingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReceivingVC" customModule="Exercise1_Delegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-sf-qGA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="ReceivingVC" id="G8M-UL-gYr">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v56-IS-t8V">
+                                            <connections>
+                                                <segue destination="Hq5-rt-s2p" kind="show" identifier="showSendingVC" id="OXI-Ur-1ZT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the '+' button to add and send text using delegates!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmG-zr-3TA">
+                                <rect key="frame" x="0.0" y="84" width="375" height="563"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TmG-zr-3TA" firstAttribute="top" secondItem="euZ-sf-qGA" secondAttribute="bottom" constant="20" id="9YZ-W3-Csi"/>
+                            <constraint firstItem="TmG-zr-3TA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9cB-6Q-rmN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TmG-zr-3TA" secondAttribute="bottom" constant="20" id="Ckr-K6-g38"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TmG-zr-3TA" secondAttribute="trailing" id="GNV-zk-eRM"/>
+                            <constraint firstItem="euZ-sf-qGA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N0S-4h-3EW"/>
+                            <constraint firstItem="euZ-sf-qGA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wba-P4-bNY"/>
+                            <constraint firstItem="euZ-sf-qGA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hZb-gc-N5m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="receivingLabel" destination="TmG-zr-3TA" id="Gdk-m5-Bk1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="118.29085457271366"/>
+        </scene>
+        <!--SendingVC-->
+        <scene sceneID="tfi-JH-IGr">
+            <objects>
+                <viewController id="Hq5-rt-s2p" customClass="SendingVC" customModule="Exercise1_Delegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XAE-55-az0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to enter some text!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOD-tm-REj">
+                                <rect key="frame" x="0.0" y="70" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AYU-JA-2g0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBX-gt-x06">
+                                <rect key="frame" x="0.0" y="160" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Yx1-Iv-2he"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SendBtnWasPressed:" destination="Hq5-rt-s2p" eventType="touchUpInside" id="gRB-jY-gml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Zu-Fd-Qmb" firstAttribute="trailing" secondItem="OBX-gt-x06" secondAttribute="trailing" id="2CC-tD-EIJ"/>
+                            <constraint firstItem="OBX-gt-x06" firstAttribute="top" secondItem="bOD-tm-REj" secondAttribute="bottom" constant="30" id="H66-Qd-EBJ"/>
+                            <constraint firstItem="OBX-gt-x06" firstAttribute="leading" secondItem="7Zu-Fd-Qmb" secondAttribute="leading" id="WSe-BL-OeG"/>
+                            <constraint firstItem="bOD-tm-REj" firstAttribute="top" secondItem="7Zu-Fd-Qmb" secondAttribute="top" constant="50" id="fYJ-W2-cXc"/>
+                            <constraint firstItem="bOD-tm-REj" firstAttribute="leading" secondItem="7Zu-Fd-Qmb" secondAttribute="leading" id="sRb-qU-s4w"/>
+                            <constraint firstItem="7Zu-Fd-Qmb" firstAttribute="trailing" secondItem="bOD-tm-REj" secondAttribute="trailing" id="vq2-Zg-6tm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Zu-Fd-Qmb"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataEntryTextField" destination="bOD-tm-REj" id="CKG-7X-sRt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83N-pe-wN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
